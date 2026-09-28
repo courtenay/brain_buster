@@ -28,7 +28,7 @@ class BrainBuster < ActiveRecord::Base
   private
   
   def self.find_random
-    find(:first, :order => random_function) 
+    order(random_function).first
   end
   
   def self.find_specific_or_fallback(id)
